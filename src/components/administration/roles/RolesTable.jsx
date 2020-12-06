@@ -1,20 +1,20 @@
-import React from 'react';
-import { Table, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import config from "../../../config";
 
 function RolesTable({ roles, setRoles, credentials }) {
-
   function deleteRole(id) {
-    fetch(`http://localhost:8090/roles/${id}`, {
+    fetch(`${config.baseUrl}/roles/${id}`, {
       method: "DELETE",
-      headers: {"Authorization": credentials.header},
+      headers: { Authorization: credentials.header },
     }).then((response) => {
       if (response.ok) {
-        setRoles(roles.filter(r => r.id !== id))
+        setRoles(roles.filter((r) => r.id !== id));
       } else {
         alert("Error al borrar un Rol");
       }
-    })
+    });
   }
 
   return (
@@ -39,25 +39,33 @@ function RolesTable({ roles, setRoles, credentials }) {
                         to={`/administrador/roles/editar-rol/${role.id}`}
                         variant="outline-secondary"
                         className="btn btn-outline-secondary btn-sm"
-                      >Modificar</Link>
+                      >
+                        Modificar
+                      </Link>
                     </td>
                     <td className="text-center">
                       <Button
-                        onClick={() => { deleteRole(role.id); }}
+                        onClick={() => {
+                          deleteRole(role.id);
+                        }}
                         variant="outline-secondary"
                         size="sm"
-                      >Eliminar</Button>
+                      >
+                        Eliminar
+                      </Button>
                     </td>
                   </tr>
                 ))
-              ) : (<tr><td colSpan={3}>No hay Roles Registrados</td></tr>)}
+              ) : (
+                <tr>
+                  <td colSpan={3}>No hay Roles Registrados</td>
+                </tr>
+              )}
             </tbody>
           </Table>
         </div>
       </div>
     </div>
-
-
   );
 }
 

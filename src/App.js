@@ -51,6 +51,7 @@ import "./styles/auth.css";
 import "./styles/blog.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import config from './config';
 
 const titleWeb = "EspAcioAbierto";
 
@@ -114,7 +115,7 @@ function App() {
   
   return (
     
-    <Router id="prueba">
+    <Router basename={config.hostingProjectName} id="prueba">
 
       <Switch>
         

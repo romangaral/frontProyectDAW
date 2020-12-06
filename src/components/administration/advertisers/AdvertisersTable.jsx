@@ -1,24 +1,24 @@
-
-import React from 'react';
-import { Table, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './../../../styles/administration.css';
-
+import React from "react";
+import { Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./../../../styles/administration.css";
+import config from "../../../config";
 
 function AdvertisersTable({ advertisers, setAdvertisers, credentials }) {
-
   function deleteAdvertiser(id) {
-    fetch(`http://localhost:8090/advertisers/${id}`, {
+    fetch(`${config.baseUrl}/advertisers/${id}`, {
       method: "DELETE",
-      headers: { "Authorization": credentials.header }
+      headers: { Authorization: credentials.header },
     }).then((response) => {
       if (response.ok) {
-        setAdvertisers(advertisers.filter(advertiser => advertiser.id !== id))
+        setAdvertisers(
+          advertisers.filter((advertiser) => advertiser.id !== id)
+        );
       } else {
-        alert('Error al borrar un Anunciante');
+        alert("Error al borrar un Anunciante");
       }
     });
-  };
+  }
 
   return (
     <div className="container-fluid">
@@ -35,8 +35,8 @@ function AdvertisersTable({ advertisers, setAdvertisers, credentials }) {
               </tr>
             </thead>
             <tbody>
-              {advertisers.length > 0
-                ? (advertisers.map((advertiser, i) => (
+              {advertisers.length > 0 ? (
+                advertisers.map((advertiser, i) => (
                   <tr key={`advertiser_${i}`}>
                     <td>{advertiser.name}</td>
                     <td>{advertiser.email}</td>
@@ -46,25 +46,35 @@ function AdvertisersTable({ advertisers, setAdvertisers, credentials }) {
                         to={`/administrador/anunciantes/editar-anunciante/${advertiser.id}`}
                         variant="outline-secondary"
                         className="btn btn-outline-secondary btn-sm"
-                      > Modificar </Link>
+                      >
+                        {" "}
+                        Modificar{" "}
+                      </Link>
                     </td>
                     <td className="text-center">
                       <Button
-                        onClick={() => { deleteAdvertiser(advertiser.id) }}
+                        onClick={() => {
+                          deleteAdvertiser(advertiser.id);
+                        }}
                         variant="outline-secondary"
                         size="sm"
-                      >Eliminar</Button>
+                      >
+                        Eliminar
+                      </Button>
                     </td>
                   </tr>
-                )))
-                : (<tr><td colSpan={5}>No hay Anunciantes</td></tr>)}
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={5}>No hay Anunciantes</td>
+                </tr>
+              )}
             </tbody>
           </Table>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-12">
-        </div>
+        <div className="col-md-12"></div>
       </div>
     </div>
   );

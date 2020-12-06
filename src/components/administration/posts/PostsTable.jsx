@@ -1,27 +1,24 @@
-
 import React from "react";
 import { Table, Button, Image } from "react-bootstrap";
-import { truncate } from 'lodash';
+import { truncate } from "lodash";
 import { photo } from "../../../images/indexImages";
+import config from "../../../config";
 
 //import icon_image from "../../../images/icon_image.png";
 
-
 function PostsTable({ posts, setPosts, credentials }) {
-
   function deletePost(id) {
-    fetch(`http://localhost:8090/posts/${id}`, {
+    fetch(`${config.baseUrl}/posts/${id}`, {
       method: "DELETE",
-      headers: { "Authorization": credentials.header },
+      headers: { Authorization: credentials.header },
     }).then((response) => {
       if (response.ok) {
-        setPosts(posts.filter(post => post.id !== id))
+        setPosts(posts.filter((post) => post.id !== id));
       } else {
         alert("Error al borrar un Post");
       }
-    })
+    });
   }
-
 
   return (
     <div className="container-fluid">
@@ -51,15 +48,18 @@ function PostsTable({ posts, setPosts, credentials }) {
                     <td>{post.categoryName}</td>
                     <td>{post.title}</td>
                     <td className="text-center">
-                      {post.picture
-                        ? <div className="icon_image col-2"><Image src={photo} /></div>
-                        : null
-                      }
+                      {post.picture ? (
+                        <div className="icon_image col-2">
+                          <Image src={photo} />
+                        </div>
+                      ) : null}
                     </td>
-                    <td>{truncate(post.content, {
-                      length: 50,
-                      separator: ' '
-                    })}</td>
+                    <td>
+                      {truncate(post.content, {
+                        length: 50,
+                        separator: " ",
+                      })}
+                    </td>
                     <td>{post.userAlias}</td>
                     <td className="text-center">{post.punctuaction}</td>
                     <td>{post.eventDate}</td>
@@ -69,30 +69,33 @@ function PostsTable({ posts, setPosts, credentials }) {
                         //onClick={() => { editPost(post); }}
                         variant="outline-secondary"
                         size="sm"
-                      >Modificar</Button>
+                      >
+                        Modificar
+                      </Button>
                     </td>
                     <td className="text-center">
                       <Button
-                        onClick={() => { deletePost(post.id); }}
+                        onClick={() => {
+                          deletePost(post.id);
+                        }}
                         variant="outline-secondary"
                         size="sm"
-                      >Eliminar</Button>
+                      >
+                        Eliminar
+                      </Button>
                     </td>
                   </tr>
                 ))
               ) : (
-                  <tr>
-                    <td colSpan={11}>No hay Posts</td>
-                  </tr>
-                )}
+                <tr>
+                  <td colSpan={11}>No hay Posts</td>
+                </tr>
+              )}
             </tbody>
           </Table>
         </div>
       </div>
     </div>
-
-
-
   );
 }
 

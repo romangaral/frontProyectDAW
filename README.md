@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Build and Deploy
+
+* Run sequentially:
+
+  * ``npm run build``
+  * ``npm run deploy``
+
+It will build and deploy the app as github-pages.
+
+Comment the env var REACT_APP_BASE_URL on file [.env](.env) for running locally.
+
 ## Available Scripts
 
 In the project directory, you can run:
