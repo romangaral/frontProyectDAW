@@ -1,0 +1,39 @@
+
+.userProfile.container-fluid {
+    padding: 40px;
+}
+.userProfile.row {
+    margin: 0px;
+}
+.userProfile.col-md-12 {
+    padding: 20px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+.userProfile.flex-column.col-md-4 {
+    padding: 30px 10px 10px 60px;
+    width: auto;
+}
+.userProfile.col-md-8 {
+    padding: 30px 60px 30px 10px;
+}
+.myInformation.container-fluid {
+    margin-bottom: 30px;
+}
+
+.changeText {
+    font-weight: bold;
+    color:#445C4E;
+}
+.profile.decorationItem {
+    color: black;
+    font-size: 1.1em;
+}
+.profile.decorationItem:hover {
+    color: #28a745;
+    font-size: 1.1em;
+}
+
+.greenText {
+    color: #28a745;
+    font-weight: bold;
+}

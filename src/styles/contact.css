@@ -1,0 +1,69 @@
+/* We use separate style files for the different components;
+In this way, they will be completely independent components
+from the rest of the app and reusable in any other project */
+
+
+.contact.container-fluid {
+    margin: 0px;
+    padding: 40px;
+}
+.contact.row {
+    margin: 0px;
+    padding: 0px;
+}
+.contact.col-md-12 {
+    margin: 0px;
+    padding: 20px 60px;
+}
+.contactFormTitle {
+    border-bottom: 2px solid rgb(224, 224, 224);
+}
+
+h1.title {
+    font-weight: bold;
+    color:#445C4E;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contact.col-md-6,
+.contact_us_text.col-md-6 {
+    margin: 0px;
+    padding: 20px 60px;
+}
+.contact.col-md-6 {
+    background-color: #d6d6d683;
+    border-radius: 10px;
+}
+
+h6.contact_us_text {
+    text-align: center;
+}
+h4.contact_us_text {
+    font-weight: bold;
+    color:#445C4E;
+    text-align: center;
+    line-height: 2em;
+}
+.contact_list_element.row {
+    list-style: none;
+    border-bottom: 2px solid rgb(224, 224, 224);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.icon_image {
+    padding: 10px;
+    float: left;
+    width: 20px;
+}
+.text_contact {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+p {
+    margin-bottom: 0;
+}
+span.boldText {
+    font-weight: bold;
+}

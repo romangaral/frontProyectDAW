@@ -1,0 +1,20 @@
+/* We use separate style files for the different components;
+In this way, they will be completely independent components
+from the rest of the app and reusable in any other project */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+}
+button.btn.btn-link {
+    color: rgb(51,61,55);
+    font-size: 1em;
+    border: 1px solid rgba(0,0,0,.125);
+    text-decoration: none;
+}
+button.btn-link:hover {
+    background-color: #28a745;
+    text-decoration: none;
+}

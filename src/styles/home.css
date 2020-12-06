@@ -1,0 +1,170 @@
+/* We use separate style files for the different components;
+In this way, they will be completely independent components
+from the rest of the app and reusable in any other project */
+
+
+/* ------ MainContainer ------ */
+.sectionContainer.container-fluid {
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 20px 0px 0px;
+    padding: 40px 30px;
+}
+.mainContainer.row {
+    margin: 0px;
+    padding: 30px 30px 30px 20px;
+    background-color: white;
+}
+.mainContainer.col-md-9 {
+    margin: 0px;
+    padding: 0px 40px 0px 10px;
+    background-color: #ffffff;
+    color: #424242;
+}
+@media(max-width:768px) {
+    .mainContainer.col-md-9 {
+        padding: 0px 0px 0px 10px;
+    }
+}
+
+/* ------ About Us Container ------ */
+.aboutUsContainer.row {
+    margin: 0px;
+    background-color: #f5f5f5;
+}
+.jumbotron.jumbotron-fluid {
+    margin: 0px;
+    padding: 40px 30px 20px;
+    background: rgba(255, 255, 255, 0.48);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.48) 0%,rgb(199, 212, 190) 80%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0.48), color-stop(80%,rgb(199, 212, 190))));
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.48) 0%, rgb(199, 212, 190) 80%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.48) 0%,rgb(199, 212, 190) 80%);
+    background: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.48) 0%, rgb(199, 212, 190) 80%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgb(199, 212, 190) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#C7D4BE', GradientType=1);
+    border-radius: 0px 6px 12px 6px;
+}
+.aboutUsTitle {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color:#424242;
+    text-shadow: gray 2px 2px 6px;
+}
+.aboutUsContainer > p.capitalLetter:first-letter {
+    float:left;
+    color:#424242;
+    text-shadow: gray 2px 2px 6px;
+    font-size:70px;
+    line-height:60px;
+    padding:2px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin-right: 5px; 
+}
+
+/* ------ Last Posts Container ------ */
+.postsContainer.row {
+    background-color: whitesmoke;
+    margin: 30px 0px 0px;
+}
+.lastPostsContainer {
+    margin: 0px;
+    padding: 40px 20px 20px;
+    width: 100%;
+}
+.lastPostsTitle {
+    font-weight: bold;
+    padding-left: 10px;
+    text-shadow: gray 2px 2px 6px;
+    color:#424242;
+}
+.postCard.card {
+    margin-bottom: 20px;
+}
+
+/* ------ Aside Section ------ */
+.asideContent.col-md-12 {
+    margin-bottom: 5px;
+}
+.asideSection.col-md-3 {
+    margin: 0px;
+    padding: 20px;
+    background-color: whitesmoke;
+    width: 100%;
+}
+.aside.row-3 {
+    margin: 0px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+.asideContent.row {
+    margin-bottom: 20px;
+    border: 2px solid #C7D4BE;
+    border-radius: .25rem;
+}
+div.asideTitle {
+    border-bottom: 2px solid #C7D4BE;
+}
+div.eventsContent {
+    padding-top: 10px;
+}
+ul.eventsList {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 0.9em;
+    list-style-type: square;
+    padding-left: 25px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
+.advertisementsContent {
+    padding: 10px 0px;
+}
+div.banner {
+    margin: 5px 0px;
+    background-color: white;
+}
+div.banner > p {
+    margin: 10px;
+    padding: 10px;
+}
+.asideTitle {
+    padding: 10px 2px 0px 0px;
+    font-weight: bold;
+    color:#424242;
+    font-size: 1.05rem;
+    text-align: center;
+}
+.links.flex-column {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.links.flex-column > a {
+    color: black;
+    padding: 4px 10px;
+}
+.links.flex-column > a:hover {
+    font-size: 1.05em;
+    color:  #E21745;
+    font-weight: bold;
+}
+@media(max-width:767px) {
+    .asideSection.col-md-3 {
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+}
+@media(min-width: 767px) and (max-width: 940px) {
+    .asideSection.col-md-3 {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    h5.asideTitle {
+        font-size: 0.8em;
+        font-weight: 800;
+    }
+    ul.eventsList {
+        padding-left: 15px;
+        font-size: 0.8em;
+    }
+}
