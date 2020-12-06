@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/frontProyectDAW/static/css/main.a9971e42.chunk.css",
+    "main.js": "/frontProyectDAW/static/js/main.d2b67731.chunk.js",
+    "main.js.map": "/frontProyectDAW/static/js/main.d2b67731.chunk.js.map",
+    "runtime-main.js": "/frontProyectDAW/static/js/runtime-main.ff951de0.js",
+    "runtime-main.js.map": "/frontProyectDAW/static/js/runtime-main.ff951de0.js.map",
+    "static/css/2.3c25ef27.chunk.css": "/frontProyectDAW/static/css/2.3c25ef27.chunk.css",
+    "static/js/2.443be57d.chunk.js": "/frontProyectDAW/static/js/2.443be57d.chunk.js",
+    "static/js/2.443be57d.chunk.js.map": "/frontProyectDAW/static/js/2.443be57d.chunk.js.map",
+    "index.html": "/frontProyectDAW/index.html",
+    "precache-manifest.2adffd1dcb3802af5e3d8c82f653d5ba.js": "/frontProyectDAW/precache-manifest.2adffd1dcb3802af5e3d8c82f653d5ba.js",
+    "service-worker.js": "/frontProyectDAW/service-worker.js",
+    "static/css/2.3c25ef27.chunk.css.map": "/frontProyectDAW/static/css/2.3c25ef27.chunk.css.map",
+    "static/css/main.a9971e42.chunk.css.map": "/frontProyectDAW/static/css/main.a9971e42.chunk.css.map",
+    "static/js/2.443be57d.chunk.js.LICENSE.txt": "/frontProyectDAW/static/js/2.443be57d.chunk.js.LICENSE.txt",
+    "static/media/ocio_asturias.jpg": "/frontProyectDAW/static/media/ocio_asturias.48885972.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff951de0.js",
+    "static/css/2.3c25ef27.chunk.css",
+    "static/js/2.443be57d.chunk.js",
+    "static/css/main.a9971e42.chunk.css",
+    "static/js/main.d2b67731.chunk.js"
+  ]
+}
